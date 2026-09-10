@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: #f4f4f2;
+  color: #222;
+}
+
+header {
+  padding: 24px 32px 8px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.date-section {
+  padding: 16px 0 28px;
+  border-bottom: 1px solid #ddd;
+}
+
+.date-section h2 {
+  margin: 0 0 12px;
+  padding: 0 32px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.photo-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 32px 8px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.photo-row img {
+  height: 380px;
+  width: auto;
+  max-width: 90vw;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  background: #ddd;
+}
+
+@media (max-width: 600px) {
+  header { padding: 16px 16px 4px; }
+  .date-section h2 { padding: 0 16px; }
+  .photo-row { padding: 0 16px 8px; gap: 10px; }
+  .photo-row img { height: 260px; }
+}
